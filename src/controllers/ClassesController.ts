@@ -11,7 +11,7 @@ interface ScheduleItem {
 
 export default class ClassesController {
   async store(req: Request, res: Response) {
-    const { name, avatar, whatsapp, bio, subject, cost, schedule } = res.body;
+    const { name, avatar, whatsapp, bio, subject, cost, schedule } = req.body;
 
     const trx = await db.transaction();
 
